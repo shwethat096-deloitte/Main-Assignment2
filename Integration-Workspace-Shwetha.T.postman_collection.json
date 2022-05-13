@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "b513b589-e20d-4212-b34c-8abd8abc9234",
+		"name": "Integration-Workspace-Shwetha.T",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"post_id\": 2003}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hu-major-assignment.us-e2.cloudhub.io/userdetails",
+					"protocol": "http",
+					"host": [
+						"hu-major-assignment",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"userdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
