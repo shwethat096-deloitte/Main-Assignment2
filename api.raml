@@ -1,0 +1,82 @@
+#%RAML 1.0
+types:
+  integrationassignment:
+    items:
+      example:
+        strict: true
+        value:
+          id: 2482
+          name: Kartik Kocchar
+          email: kartik_kocchar@rutherford.io
+          gender: female
+          status: inactive
+      properties:
+        id:
+          example: 2482
+          type: number
+          format: int
+        name:
+          example: Kartik Kocchar
+          type: string
+        email:
+          example: kartik_kocchar@rutherford.io
+          type: string
+        gender:
+          example: female
+          type: string
+        status:
+          example: inactive
+          type: string
+  integration3:
+    properties:
+      Name:
+        example: Gorakhanatha Chaturvedi
+        type: string
+      Status:
+        example: active
+        type: string
+      Gender:
+        example: female
+        type: string
+  milestone2data:
+    properties:
+      userdetails:
+        items:
+          properties:
+            post_id:
+              example: "2003"
+              type: string
+            id:
+              example: "1978"
+              type: string
+            name:
+              example: Bhaaswar Pothuvaal III
+              type: string
+title: Major Assignment Shwetha.t
+/milestone1:
+  get:
+    responses:
+      "200":
+        body:
+          application/json:
+            type: integrationassignment
+            items:
+              type: object
+/milestone2:
+  post:
+    body: {}
+    responses:
+      "200": {}
+  get:
+    responses:
+      "200":
+        body:
+          application/json:
+            type: milestone2data
+/milestone3:
+  get:
+    responses:
+      "200":
+        body:
+          application/json:
+            type: integration3
